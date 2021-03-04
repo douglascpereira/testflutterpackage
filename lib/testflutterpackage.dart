@@ -14,9 +14,17 @@ class CallURL {
 
   Widget callURL(BuildContext context) {
     return Scaffold(
-        body: InkWell(
-      child: Text("toque aqui"),
-      onTap: () => _launch(),
+        body: Column(
+      children: [
+        Text("Tela do package"),
+        SizedBox(
+          width: 30,
+        ),
+        InkWell(
+          child: Text("toque aqui"),
+          onTap: () => _launch(),
+        ),
+      ],
     ));
   }
 }
