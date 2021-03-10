@@ -13,25 +13,23 @@ class CallURL {
   }
 
   Widget callURL(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text("Package"),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Package"),
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              Text("Tela do package"),
+              SizedBox(
+                height: 30,
+              ),
+              InkWell(
+                child: Text("toque aqui"),
+                onTap: () => _launch(),
+              ),
+            ],
           ),
-          body: Center(
-            child: Column(
-              children: [
-                Text("Tela do package"),
-                SizedBox(
-                  height: 30,
-                ),
-                InkWell(
-                  child: Text("toque aqui"),
-                  onTap: () => _launch(),
-                ),
-              ],
-            ),
-          )),
-    );
+        ));
   }
 }
