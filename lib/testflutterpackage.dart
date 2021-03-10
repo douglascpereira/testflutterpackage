@@ -4,18 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CallURL extends StatelessWidget {
-  final BuildContext contextExterno;
-
-  CallURL(this.contextExterno);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: callURL(this.contextExterno),
-    );
-  }
-
+class CallURL {
   Future<void> _launch() async {
     final String urlString = "https://www.google.com.br";
     if (await canLaunch(urlString)) {
