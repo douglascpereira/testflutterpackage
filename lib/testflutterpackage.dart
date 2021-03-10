@@ -12,7 +12,7 @@ class CallURL {
     }
   }
 
-  Widget callURL(BuildContext context) {
+  Widget callURL() {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
