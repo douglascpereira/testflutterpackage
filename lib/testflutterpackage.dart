@@ -4,14 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CallURL extends StatefulWidget {
-  CallURL({Key key}) : super(key: key);
+class CallURL extends StatelessWidget {
+  const CallURL({Key key}) : super(key: key);
 
   @override
-  _CallURLState createState() => _CallURLState();
-}
+  Widget build(BuildContext context) {
+    return Container(
+      child: callURL(context),
+    );
+  }
 
-class _CallURLState extends State<CallURL> {
   Future<void> _launch() async {
     final String urlString = "https://www.google.com.br";
     if (await canLaunch(urlString)) {
@@ -19,8 +21,7 @@ class _CallURLState extends State<CallURL> {
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
+  Widget callURL(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
